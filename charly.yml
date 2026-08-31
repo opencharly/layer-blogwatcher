@@ -1,7 +1,7 @@
 version: 2026.232.0520
 blogwatcher:
     candy:
-        version: 2026.144.1443
+        version: 2026.243.0100
         description: |
             Blog/RSS feed monitor CLI installed from source via go install
             Installs the blogwatcher cobra CLI (github.com/Hyaxia/blogwatcher)
@@ -11,7 +11,7 @@ blogwatcher:
             executable, and `blogwatcher --help` runs (exit 0) and lists its
             feed-management subcommands (add, scan, blogs, articles, read).
         require:
-            - '@github.com/opencharly/layer-golang:v2026.235.2057'
+            - '@github.com/opencharly/layer-golang:v2026.239.1614'
         env:
             GOPATH: "~/go"
         path_append:
