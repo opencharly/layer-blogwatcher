@@ -10,7 +10,7 @@ source tree and no service of its own.
 Canonical files:
 
 - `charly.yml` — the `blogwatcher:` candy entity and the `blogwatcher-skill:` skill entity.
-- `.github/workflows/deploy.yml` — the manifest gate.
+- `.github/workflows/` — the org-wide `charly/pr-validator` gate; there is no per-repo candy gate.
 - `.github/workflows/tag-on-merge.yml` — CalVer tag + `CHANGELOG/` on merge.
 - `README.md` — user overview only; never agent guidance.
 
@@ -28,12 +28,10 @@ Canonical files:
 
 ## Build / validate / test
 
-- `charly box validate` at the repo root — the same structural gate CI runs: the
-  manifest must parse and validate at the pinned charly. The CI pin lives in
-  `.github/workflows/deploy.yml`; keep the `version:` schema stamp within the
-  pinned charly's supported range (do not migrate the stamp past the pin).
-- `.github/workflows/deploy.yml` — builds the pinned charly from a CI-time
-  checkout and runs `charly box validate`. This is the merge gate.
+- `charly box validate` at the repo root — the structural check: the manifest
+  must parse and validate at the installed charly.
+- The merge gate is the org-wide `charly/pr-validator` (required check
+  `validate / validate`); there is no per-repo candy gate.
 - There is no live bed: the candy is a `go install`, so the evidence is its
   `plan:` `check:` steps, which assert the binary exists and is executable and
   that `blogwatcher --help` runs and lists its subcommands.
