@@ -9,7 +9,7 @@ blogwatcher:
             executable, and `blogwatcher --help` runs (exit 0) and lists its
             feed-management subcommands (add, scan, blogs, articles, read).
         require:
-            - '@github.com/opencharly/layer-golang:v2026.239.1614'
+            - '@github.com/opencharly/layer-golang:v2026.272.0137'
         env:
             GOPATH: "~/go"
         path_append:
