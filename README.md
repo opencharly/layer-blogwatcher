@@ -52,6 +52,5 @@ blogwatcher read              # read articles
 
 - Owning skill: `/charly-tools:blogwatcher`
 - Requires: `/charly-coder:golang`
-- Bundled by: `/charly-openclaw:openclaw-full`
 - [`opencharly/charly`](https://github.com/opencharly/charly) — the charly CLI and image builder
 - [`opencharly/opencharly`](https://github.com/opencharly/opencharly) — the umbrella
